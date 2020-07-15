@@ -41,7 +41,7 @@
 
 -(void)clickBtn{
     
-    UIViewController *viewCtl = [[MTRouter sharedInstance] performTarget:@"MyComponentBViewController" action:@"updateInfo:" arguments:[NSArray arrayWithObject:@"来自组件B"] isCacheTarget:NO];
+    [[MTRouter sharedInstance] performTarget:@"MyComponentBViewController" action:@"updateInfo:" arguments:[NSArray arrayWithObject:@"来自组件B"] isCacheTarget:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
