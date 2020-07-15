@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"MyComponentAViewController";
+
         [self.view setBackgroundColor:[UIColor whiteColor]];
     
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
@@ -41,7 +41,7 @@
 
 -(void)clickBtn{
     
-    [[MTRouter sharedInstance] performTarget:@"MyComponentViewController" action:@"updateInfo:" arguments:[NSArray arrayWithObject:@"来自组件B"] isCacheTarget:NO];
+    [[MTRouter sharedInstance] performTarget:@"MyComponentViewController" action:@"updateInfo:" arguments:[NSArray arrayWithObject:@"来自组件B"] isCacheTarget:YES];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
